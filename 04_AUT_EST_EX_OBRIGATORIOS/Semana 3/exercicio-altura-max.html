@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Etapa 3</title>
+</head>
+<body>
+<h1>Ferramenta para calcular altura máxima</h1>
+<h2>(considerando g = 10 m/s2) </h2>
+    <div>
+        <label>Insira a velocidade inicial:
+            <input type="text" name="valor1" id="velocidade1" ><br>
+        </label>
+    </div>
+    <button onclick="calcularvelocidade()">Calcular</button>
+    <div>   <span id="m"></span><br> <br>
+        <span id="t"></span></div>
+</body>
+    <script>
+        var velIni = document.querySelector("#velocidade1")
+        var gravidade = 10
+        var metros = document.querySelector("#m")
+        var temp = document.querySelector("#t")
+        function calcularvelocidade() {
+            var tempo = parseInt(velIni.value)/gravidade;
+            var hmax = parseInt(velIni.value ** 2)/ parseInt(2*gravidade);
+            metros.innerHTML = String("Altura Máxima= ") + hmax
+            temp.innerHTML = String("Tempo = ") + tempo
+        }
+    </script>
+</html>
