@@ -2,28 +2,40 @@
     background-color: rgb(255, 7, 7);
 }
 
+
 .body{
     padding: 0;
     margin: 0;
     background: #ffffff;
 }
+
+
 .navbar {
     background:#000000;
 }
+
+
 .nav-link,
 .navbar-brand {
     color: #fff;
     cursor: pointer;
 }
+
+
 .nav-link {
     margin-right: 1em !important;
 }
+
+
 .nav-link:hover {
     color: #000;
 }
+
+
 .navbar-collapse {
     justify-content: flex-end;
 }
+
 
 .header {
     background-image: url('images/header-background.jpg');
@@ -32,10 +44,23 @@
     position: relative;
 }
 
+
 .var ready = (callback) => {
     if (document.readyState != "loading") callback();
     else document.addEventListener("DOMContentLoaded", callback);
 }
+
+
 ready(() => {
     document.querySelector(".header").style.height = window.innerHeight + "px";
 })
+
+
+#get{
+    color: #a34f74;
+}
+
+
+.button-get{
+    background-color: #a34f74;
+}
