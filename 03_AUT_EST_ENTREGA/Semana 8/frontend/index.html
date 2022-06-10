@@ -8,18 +8,52 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 
 <title>Currículo incompleto de Daniel Quintão Dávila</title>
 </head> 
         <body> 
+          <div id="myModal"class="modal customizar">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content customize">
+                <div class="modal-header">
+                  <h5 class="modal-title">Nova Toalha</h5>
+                </div>
+                <div class="modal-body">
+                  <p>Fazer o cadastro de uma nova Toalha.</p>
+                </div>
+                <form>
+                  <div class="mb-1">
+                    <label for="exampleInputEmail1" class="form-label"></label>Nome:
+                    <input type="text" class="form-control" name="nomeToalha">
+                  </div>
+                  <div class="mb-2">
+                    <label for="exampleInputEmail1" class="form-label"></label>Número da toalha:
+                    <input type="text" class="form-control" name="numeroToalha">
+                  </div>
+                  <div class="mb-2">
+                    <label for="exampleInputEmail1" class="form-label"></label>Número da toalha:
+                    <input type="text" class="form-control" name="numeroToalha">
+                  </div>
+                  <div class="mb-2">
+                    <label for="exampleInputEmail1" class="form-label"></label>Número da toalha:
+                    <input type="text" class="form-control" name="numeroToalha">
+                  </div>
+                </form>
+                <div class="modal-footer">
+                  <button onclick="salvarAss()" type="button" class="btn btn-primary">Salvar Doação</button>
+                  <button onclick="fecharModal()" type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar Cadastro</button>
+                </div>
+              </div>
+            </div>
+          </div>
           <script src="jquery-3.5.1.min.js"></script>
           <script src="bootstrap/js/bootstrap.min.js"></script>
         <div id="main"> 
           <h1 class="vermelho" id="demo" style="text-align:center">Daniel Quintão Dávila - Currículo (incompleto)</h1> 
           <button type="button" onclick="myFunction()">Click Me!</button>
           <h2><b>Resumo Pessoal</b></h2> </div> 
-          <h3>Estudante, letrado em filosofia e diletante em biologia, com excelentes habilidades de comunicação.  Caracterizado por extrema racionalidade, completo desinteresse em política. 
+          <h3>Estudante, letrado em filosofia e diletante em biologia, com excelentes habilidades de comunicação. Caracterizado por extrema racionalidade, completo desinteresse em política. 
             Possui resistência física e mental de um superatleta. Aprende rápido.</h3>
           <h3>↕</h3>
           <h2><b>Principais Competências</b></h2>
@@ -38,8 +72,26 @@
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
             <p><img src="foto.jpg" alt="Foto" style="width:500px;height:700px;"></p>
         <h3 style="text-align:center; color:white;" id="hidden">"HIDDEN TEXT"</h3>
-        <button>Alerte-me sobre Integração avançada com JQuery + JSON + Ajax.</button> 
+        <div id="get" class="sections">
+          <h3>Teste GET</h3>
+          Resultados obtidos com a requisição GET:
+        </div>
+        <button onclick="TestGET()" class="button-get">Test GET</button> 
         </body> 
+        <h3>↕</h3>
+        <table class="table" id="table">
+          <thead class="thead-warning">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">N° Toalha</th>
+              <th scope="col">Edição</th>
+            </tr>
+          </thead>
+          <tbody id="table-body-toalha">
+          </tbody>
+        </table>
+        <button onclick="teste()" id="buttonnew" class="buttonNew"><p><i class="bi bi-plus-circle-fill"></i>  Nova Toalha</p></button>
         <h3>↕</h3>
         <h3 class="feature-title">Entre em contato:</h3>
         <div class="form-group">
@@ -53,7 +105,7 @@
         </div>
         <input type="submit" class="btn btn-secondary btn-block" value="Enviar" name="">
         <h3>↕</h3>
-           <nav class="navbar navbar-expand-md">
+          <nav class="navbar navbar-expand-md">
             <a class="navbar-brand" href="#">►</a>
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
               <span class="navbar-toggler-icon"></span>
